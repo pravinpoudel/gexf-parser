@@ -10,7 +10,7 @@
 	let yMin = 0;
 	let yMax = 0;
 
-	let gexf_file = fs.readFileSync('./files/revo_run0.gexf', 'utf-8');
+	let gexf_file = fs.readFileSync('./files/revo_run3.gexf', 'utf-8');
 
 	let graph = gexf.parse(gexf_file);
 
@@ -58,12 +58,12 @@
 
 	let graph_json = JSON.stringify(graph);
 
-	fs.readFile(path.join(__dirname,"./mygraph.json"), 'utf8', (err, data)=>{
+	fs.readFile(path.join(__dirname,"./mygraph_3.json"), 'utf8', (err, data)=>{
 		if(err){
 			console.error(err);
 		}
 		else{
-			fs.writeFile("mygraph.json", graph_json, 'utf8', ()=>{console.log("please check the json file")});
+			fs.writeFile("mygraph_3.json", graph_json, 'utf8', ()=>{console.log("please check the json file")});
 		}
 	})
 })()
